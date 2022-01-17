@@ -3,7 +3,7 @@ const btnCheck = document.querySelectorAll(".icon");
 
 const fantasmas = [
     {nombre: "Banshee", DOTS: true, Escritura: false, EMF: false, Orbes: true, Temperaturas: false,Spirit: false,Huellas: true, fortaleza:" Se fija en un jugador para atacar", debilidad:" Menos agresivo cerca de un crucifijo"},
-    {nombre: "Demonio", DOTS: true, Escritura: true, EMF: false, Orbes: false, Temperaturas: false,Spirit: false,Huellas: true, fortaleza:" Ataca con mas frecuencia", debilidad:" Usar una posesion maldita quitara menos cordura"},
+    {nombre: "Demonio", DOTS: false, Escritura: true, EMF: false, Orbes: false, Temperaturas: true,Spirit: false,Huellas: true, fortaleza:" Ataca con mas frecuencia", debilidad:" Usar una posesion maldita quitara menos cordura"},
     {nombre: "Ente", DOTS: true, Escritura: false, EMF: false, Orbes: false, Temperaturas: false,Spirit: true,Huellas: true, fortaleza:" Mirarlo directamente descendera tu cordura rapidamente", debilidad:" Sacarle una foto hara que desaparezca"},
     {nombre: "Espectro", DOTS: true, Escritura: false, EMF: true, Orbes: false, Temperaturas: false,Spirit: true,Huellas: false, fortaleza:" No se pueden rastrar por las pisadas", debilidad:" Tienen una reaccion toxica a la sal"},
     {nombre: "Espiritu", DOTS: false, Escritura: true, EMF: true, Orbes: false, Temperaturas: false,Spirit: true,Huellas: false, fortaleza:" No tiene lol", debilidad:" Utilizar un incienso cerca de ellos los parara temporalmente"},
