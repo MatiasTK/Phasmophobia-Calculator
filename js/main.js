@@ -34,14 +34,36 @@ document.addEventListener("DOMContentLoaded", ()=> {
 })
 
 function cambiarColor(){
-    for(var i = 0; i < btnCheck.length; i++){
+    /* for(var i = 0; i < btnCheck.length; i++){
         btnCheck[i].onclick = (e)=>{
+            console.log(e.target);
             if(cajas[e.target.id].classList.contains("caja__check")){
                 cajas[e.target.id].classList.remove("caja__check");
                 actualizarFantasma(Number(e.target.id)+1,false);
             }else{
                 cajas[e.target.id].classList.add("caja__check");
                 actualizarFantasma(Number(e.target.id)+1,true);
+            }
+        }
+    } */
+    for(var i = 0; i < cajas.length; i++){
+        cajas[i].onclick = e=>{
+            if(e.target.classList.contains("caja__check")){
+                if(e.target.classList.contains("caja")){
+                    e.target.classList.remove("caja__check");
+                    actualizarFantasma(Number(e.target.id)+1,false);
+                }else{
+                    e.path[3].classList.remove("caja__check");
+                    actualizarFantasma(Number(e.path[3].id)+1,false);
+                }
+            }else{
+                if(e.target.classList.contains("caja")){
+                    e.target.classList.add("caja__check");
+                    actualizarFantasma(Number(e.target.id)+1,true);
+                }else{
+                    e.path[3].classList.add("caja__check");
+                    actualizarFantasma(Number(e.path[3].id)+1,true);
+                }
             }
         }
     }
