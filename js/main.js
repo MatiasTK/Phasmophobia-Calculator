@@ -16,7 +16,7 @@ const fantasmas = [
     {nombre: "Obake", DOTS: false, Escritura: false, EMF: true, Orbes: true, Temperaturas: false,Spirit: false,Huellas: true, fortaleza:" Rara vez deja huellas", debilidad:" A veces cambia de forma"},
     {nombre: "Oni", DOTS: true, Escritura: false, EMF: true, Orbes: false, Temperaturas: true,Spirit: false,Huellas: false, fortaleza:" Mas activos cuando hay jugadores cerca, mueven objetos rapido", debilidad:" Son muy activos con las interacciones"},
     {nombre: "Onryo", DOTS: false, Escritura: false, EMF: false, Orbes: true, Temperaturas: true,Spirit: true,Huellas: false, fortaleza:" Apagar una llama puede provocar un ataque", debilidad:" Si se siente amenazado ataca con menos frecuencia"},
-    {nombre: "Pesadilla", DOTS: false, Escritura: true, EMF: false, Orbes: true, Temperaturas: false,Spirit: true,Huellas: false, fortaleza:" Atacan con mas frecuencia si las luces estan apagadas", debilidad:" Atacan con mas frecuencia si las luces estan encendidas"},
+    {nombre: "Pesadilla", DOTS: false, Escritura: true, EMF: false, Orbes: true, Temperaturas: false,Spirit: true,Huellas: false, fortaleza:" Atacan con mas frecuencia si las luces estan apagadas", debilidad:" Atacan con menos frecuencia si las luces estan encendidas"},
     {nombre: "Poltergeist", DOTS: false, Escritura: true, EMF: false, Orbes: false, Temperaturas: false,Spirit: true,Huellas: true, fortaleza:" Puede tirar varios objetos al mismo tiempo", debilidad:" Es inefectivo en habitaciones vacias"},
     {nombre: "Raiju", DOTS: true, Escritura: false, EMF: true, Orbes: true, Temperaturas: false,Spirit: false,Huellas: false, fortaleza:" Se mueve mas rapido con dispostivos electricos", debilidad:" Interfiere con los aparatos electronicos cuando ataca"},
     {nombre: "Revenant", DOTS: false, Escritura: true, EMF: false, Orbes: true, Temperaturas: true,Spirit: false,Huellas: false, fortaleza:" Se mueve muy rapido cuando caza", debilidad:" Esconderse hara que se mueva lentamente"},
@@ -34,18 +34,6 @@ document.addEventListener("DOMContentLoaded", ()=> {
 })
 
 function cambiarColor(){
-    /* for(var i = 0; i < btnCheck.length; i++){
-        btnCheck[i].onclick = (e)=>{
-            console.log(e.target);
-            if(cajas[e.target.id].classList.contains("caja__check")){
-                cajas[e.target.id].classList.remove("caja__check");
-                actualizarFantasma(Number(e.target.id)+1,false);
-            }else{
-                cajas[e.target.id].classList.add("caja__check");
-                actualizarFantasma(Number(e.target.id)+1,true);
-            }
-        }
-    } */
     for(var i = 0; i < cajas.length; i++){
         cajas[i].onclick = e=>{
             if(e.currentTarget.classList.contains("caja__check")){
