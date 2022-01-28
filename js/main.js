@@ -140,6 +140,7 @@ function encontrarPruebas(fantasma, primer_prueba, segunda_prueba, tercera_prueb
 function aniadirFantasmasPosibles(listaPosibles){
 
     const lista = document.querySelector(".fantasmas__posibles");
+    lista.classList.remove("ocultar");
 
     
     for(let i = 0; i < listaPosibles.length; i++){
@@ -221,10 +222,14 @@ function borrarLista(){
 
 function reiniciarCaja(){
     const caja = document.querySelector(".reiniciar-caja");
+    const seccionFantasmas = document.querySelector(".fantasmas__posibles");
+
     caja.onclick = (e)=> {
         for(let i = 0; i < cajas.length; i++){
             cajas[i].classList.remove("caja__check");
             actualizarFantasma(Number(i)+1,false);
         }
+        seccionFantasmas.classList.add("ocultar");
     }
+
 }

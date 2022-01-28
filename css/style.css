@@ -97,6 +97,7 @@ a {
     height: 100%;
     padding: 3rem;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .caja{
@@ -225,4 +226,8 @@ a {
     .fantasma__habilidades:last-of-type {
         padding-bottom: 2rem;
     }
+}
+
+.ocultar {
+    display: none;
 }
