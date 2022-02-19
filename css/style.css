@@ -120,7 +120,7 @@ a {
     color: red;
 }
 
-.caja__check:hover{
+.cajas .caja__check:hover{
     color: var(--darker);
 }
 
