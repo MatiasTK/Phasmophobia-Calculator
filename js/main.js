@@ -2,24 +2,24 @@ const cajas = document.querySelectorAll(".caja");
 const btnCheck = document.querySelectorAll(".icon");
 
 const fantasmas = [
-    {nombre: "Banshee", DOTS: true, Escritura: false, EMF: false, Orbes: true, Temperaturas: false,Spirit: false,Huellas: true, fortaleza:" Se fija en un jugador para atacar", debilidad:" Menos agresivo cerca de un crucifijo"},
-    {nombre: "Demonio", DOTS: false, Escritura: true, EMF: false, Orbes: false, Temperaturas: true,Spirit: false,Huellas: true, fortaleza:" Ataca con mas frecuencia", debilidad:" Usar una posesion maldita quitara menos cordura"},
+    {nombre: "Banshee", DOTS: true, Escritura: false, EMF: false, Orbes: true, Temperaturas: false,Spirit: false,Huellas: true, fortaleza:" Se fija en un jugador para atacar", debilidad:" A veces lo escuchas gritar desde el microfono parabolico"},
+    {nombre: "Demonio", DOTS: false, Escritura: true, EMF: false, Orbes: false, Temperaturas: true,Spirit: false,Huellas: true, fortaleza:" Ataca con mas frecuencia", debilidad:" Menos agresivo cerca de un crucifijo"},
     {nombre: "Ente", DOTS: true, Escritura: false, EMF: false, Orbes: false, Temperaturas: false,Spirit: true,Huellas: true, fortaleza:" Mirarlo directamente descendera tu cordura rapidamente", debilidad:" Sacarle una foto hara que desaparezca"},
-    {nombre: "Espectro", DOTS: true, Escritura: false, EMF: true, Orbes: false, Temperaturas: false,Spirit: true,Huellas: false, fortaleza:" No se pueden rastrar por las pisadas", debilidad:" Tienen una reaccion toxica a la sal"},
-    {nombre: "Espiritu", DOTS: false, Escritura: true, EMF: true, Orbes: false, Temperaturas: false,Spirit: true,Huellas: false, fortaleza:" No tiene lol", debilidad:" Utilizar un incienso cerca de ellos los parara temporalmente"},
-    {nombre: "Gemelos", DOTS: false, Escritura: false, EMF: true, Orbes: false, Temperaturas: true,Spirit: true,Huellas: false, fortaleza:" Cada uno puede enfadarse e iniciar un ataque", debilidad:" Suelen interactuar en dos lugares a la vez"},
+    {nombre: "Espectro", DOTS: true, Escritura: false, EMF: true, Orbes: false, Temperaturas: false,Spirit: true,Huellas: false, fortaleza:" No dejan pisadas luego de pisar la sal", debilidad:" Se volveran mas activos si pisan la sal"},
+    {nombre: "Espiritu", DOTS: false, Escritura: true, EMF: true, Orbes: false, Temperaturas: false,Spirit: true,Huellas: false, fortaleza:" No tiene lol", debilidad:" Utilizar un incienso cerca de ellos evitara que ataque por un largo periodo"},
+    {nombre: "Gemelos", DOTS: false, Escritura: false, EMF: true, Orbes: false, Temperaturas: true,Spirit: true,Huellas: false, fortaleza:" Cualquiera de los gemelos puede iniciar una caceria aunque no al mismo tiempo", debilidad:" Interactua con mas frecuencia en el ambiente"},
     {nombre: "Goryo", DOTS: true, Escritura: false, EMF: true, Orbes: false, Temperaturas: false,Spirit: false,Huellas: true, fortaleza:" Se va a mostrar solo cuando no hay nadie cerca y solo se lo puede ver en el dots con una camara de video", debilidad:" No se alejan mucho de su habitacion"},
     {nombre: "Hantu", DOTS: false, Escritura: false, EMF: false, Orbes: true, Temperaturas: true,Spirit: false,Huellas: true, fortaleza:" Se mueve mas rapido en temperatura fria", debilidad:" Se mueve mas lento en temperatura calida"},
     {nombre: "Jinn", DOTS: false, Escritura: false, EMF: true, Orbes: false, Temperaturas: true,Spirit: false,Huellas: true, fortaleza:" Se mueve mas rapido cuando el jugador esta lejos", debilidad:" Apagar los fusibles evita que pueda usar sus habilidades"},
-    {nombre: "Mimico", DOTS: false, Escritura: false, EMF: false, Orbes: true, Temperaturas: true,Spirit: true,Huellas: true, fortaleza:" Pueden imitar la conducta de otro fantasma", debilidad:" Aparecen orbes en la habitacion del fantasma"},
-    {nombre: "Myling", DOTS: false, Escritura: true, EMF: true, Orbes: false, Temperaturas: false,Spirit: false,Huellas: true, fortaleza:" Cuando ataca no se escuchan sus pasos", debilidad: " Hacen ruido mas frecuentemente"},
-    {nombre: "Obake", DOTS: false, Escritura: false, EMF: true, Orbes: true, Temperaturas: false,Spirit: false,Huellas: true, fortaleza:" Rara vez deja huellas", debilidad:" A veces cambia de forma"},
-    {nombre: "Oni", DOTS: true, Escritura: false, EMF: true, Orbes: false, Temperaturas: true,Spirit: false,Huellas: false, fortaleza:" Mas activos cuando hay jugadores cerca, mueven objetos rapido", debilidad:" Son muy activos con las interacciones"},
-    {nombre: "Onryo", DOTS: false, Escritura: false, EMF: false, Orbes: true, Temperaturas: true,Spirit: true,Huellas: false, fortaleza:" Apagar una llama puede provocar un ataque", debilidad:" Si se siente amenazado ataca con menos frecuencia"},
+    {nombre: "Mimico", DOTS: false, Escritura: false, EMF: false, Orbes: true, Temperaturas: true,Spirit: true,Huellas: true, fortaleza:" Pueden imitar las habilidades y rasgos de otros fantasmas ", debilidad:" Aparecen orbes en la habitacion del fantasma"},
+    {nombre: "Myling", DOTS: false, Escritura: true, EMF: true, Orbes: false, Temperaturas: false,Spirit: false,Huellas: true, fortaleza:" Cuando ataca es mas dificil oir los pasos", debilidad: " Hacen sonido paranormal mas frecuente en el microfono parabolico"},
+    {nombre: "Obake", DOTS: false, Escritura: false, EMF: true, Orbes: true, Temperaturas: false,Spirit: false,Huellas: true, fortaleza:" Deja huellas que desaparecen mas rapido", debilidad:" A veces cambia de forma / A veces deja 6 dedos en huella"},
+    {nombre: "Oni", DOTS: true, Escritura: false, EMF: true, Orbes: false, Temperaturas: true,Spirit: false,Huellas: false, fortaleza:" Tiene mayor actividad y eventos fantasma", debilidad:" Son muy activos con las interacciones"},
+    {nombre: "Onryo", DOTS: false, Escritura: false, EMF: false, Orbes: true, Temperaturas: true,Spirit: true,Huellas: false, fortaleza:" Apagar una llama puede provocar un ataque", debilidad:" La presencia de llamas reduce la habilidad de atacar"},
     {nombre: "Pesadilla", DOTS: false, Escritura: true, EMF: false, Orbes: true, Temperaturas: false,Spirit: true,Huellas: false, fortaleza:" Atacan con mas frecuencia si las luces estan apagadas", debilidad:" Atacan con menos frecuencia si las luces estan encendidas"},
     {nombre: "Poltergeist", DOTS: false, Escritura: true, EMF: false, Orbes: false, Temperaturas: false,Spirit: true,Huellas: true, fortaleza:" Puede tirar varios objetos al mismo tiempo", debilidad:" Es inefectivo en habitaciones vacias"},
-    {nombre: "Raiju", DOTS: true, Escritura: false, EMF: true, Orbes: true, Temperaturas: false,Spirit: false,Huellas: false, fortaleza:" Se mueve mas rapido con dispostivos electricos", debilidad:" Interfiere con los aparatos electronicos cuando ataca"},
-    {nombre: "Revenant", DOTS: false, Escritura: true, EMF: false, Orbes: true, Temperaturas: true,Spirit: false,Huellas: false, fortaleza:" Se mueve muy rapido cuando caza", debilidad:" Esconderse hara que se mueva lentamente"},
+    {nombre: "Raiju", DOTS: true, Escritura: false, EMF: true, Orbes: true, Temperaturas: false,Spirit: false,Huellas: false, fortaleza:" Se mueve mas rapido con dispostivos electricos", debilidad:" Interfiere con los aparatos electronicos a mayor distancia cuando ataca"},
+    {nombre: "Revenant", DOTS: false, Escritura: true, EMF: false, Orbes: true, Temperaturas: true,Spirit: false,Huellas: false, fortaleza:" Se mueve mas rapido si ve a un jugador en una caceria", debilidad:" Se mueve lento cuando no esta siguiendo a un jugador"},
     {nombre: "Sombra", DOTS: false, Escritura: true, EMF: true, Orbes: false, Temperaturas: true,Spirit: false,Huellas: false, fortaleza:" Dificil de encontrar cuando hay dos o mas jugadores", debilidad:" No ataca si hay varias personas cerca"},
     {nombre: "Yokai", DOTS: true, Escritura: false, EMF: false, Orbes: true, Temperaturas: false,Spirit: true,Huellas: false, fortaleza:" Hablar cerca aumenta las probilidades de ataque", debilidad:" Cuando esta cazando solo puede oir voces"},
     {nombre: "Yurei", DOTS: true, Escritura: false, EMF: false, Orbes: true, Temperaturas: true,Spirit: false,Huellas: false, fortaleza:" Tiene gran influencia en la cordura", debilidad:" Si se usa un incienso en su habitacion lo atrapa por 90 segundos"}
@@ -29,9 +29,21 @@ const fantasmaBuscado = {nombre:null, DOTS:false, Escritura:false, EMF:false, Or
 var listaPosibles = [];
 
 document.addEventListener("DOMContentLoaded", ()=> {
+    ocultarPosibles();
     cambiarColor();
     reiniciarCaja();
 })
+
+function ocultarPosibles(){
+    const posibles = document.querySelector(".fantasmas__posibles");
+    const fantasmas = document.querySelector(".fantasmas");
+    console.log(posibles.innerHTML);
+    if(posibles.innerHTML.trim() === "" || posibles.classList.contains("ocultar")){
+        fantasmas.classList.add("hidden");
+    }else{
+        fantasmas.classList.remove("hidden");
+    }
+}
 
 function cambiarColor(){
     for(var i = 0; i < cajas.length; i++){
@@ -53,6 +65,7 @@ function cambiarColor(){
                     actualizarFantasma(Number(e.path[3].id)+1,true);
                 }
             }
+            ocultarPosibles();
         }
     }
 }
@@ -181,6 +194,16 @@ function aniadirFantasmasPosibles(listaPosibles){
 
         const div_propiedades = document.createElement("div");
         div_propiedades.classList.add("fantasma__propiedades");
+
+        const boton = document.createElement("div");
+        boton.classList.add("boton-flex")
+        const eliminar = document.createElement("div");
+        eliminar.classList.add("boton-x");
+        const eliminar_texto = document.createElement("p");
+        eliminar_texto.textContent = "X";
+        eliminar.appendChild(eliminar_texto);
+        boton.appendChild(eliminar);
+        div_propiedades.appendChild(boton);
         
         const nombre = document.createElement("span");
         nombre.classList.add("fantasma__nombre");
@@ -209,6 +232,8 @@ function aniadirFantasmasPosibles(listaPosibles){
 
         fantasma.classList.add("caja-fantasma");
         lista.appendChild(fantasma);
+
+        eliminar.addEventListener("click", (e) => e.path[3].remove());
     }
 }
 
@@ -230,6 +255,7 @@ function reiniciarCaja(){
             actualizarFantasma(Number(i)+1,false);
         }
         seccionFantasmas.classList.add("ocultar");
+        ocultarPosibles();
     }
 
 }

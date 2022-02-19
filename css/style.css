@@ -1,6 +1,7 @@
 :root{
     --dark-mode: #333333;
     --darker: #222222;
+    --blanco: #fff;
     --verde: #72ba36;
     --rojo: #950006;
     --morado: #983bc8;
@@ -88,6 +89,10 @@ a {
     cursor: pointer;
 }
 
+.hidden{
+    display: none;
+}
+
 /* Body */
 .cajas{
     display: grid;
@@ -110,12 +115,27 @@ a {
     padding: 2rem;
 }
 
+.caja:hover{
+    border: 1px solid var(--blanco);
+    color: red;
+}
+
+.caja__check:hover{
+    color: var(--darker);
+}
+
 .reiniciar-caja {
     justify-content: center;
     cursor: pointer;
     padding: 3rem;
     text-align: center;
     font-family: 'Special Elite', regular;
+}
+
+.reiniciar-caja:hover {
+    color: white;
+    background-color: var(--rojo);
+    border: solid 1px var(--rojo);
 }
 
 .icon path{
@@ -134,6 +154,42 @@ a {
     gap: 1rem;
 }
 
+.caja-fantasma{
+    background-color: var(--darker);
+    border-radius: 1rem;
+}
+
+.boton-flex{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.boton-x{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--morado);
+    background-color: var(--morado);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem;
+    max-height: 3rem;
+    max-width: 3rem;
+    margin-top: 1.5rem;
+    margin-right: 2.5rem;
+    cursor: pointer;
+}
+
+.boton-x p{
+    pointer-events: none;
+}
+
+.boton-x:hover{
+    border: 1px solid red;
+    background-color: red;
+}
+
 .fantasma__nombre{
     display: block;
     text-align: center;
@@ -144,10 +200,6 @@ a {
     font-family: Yahfie;
 }
 
-.caja-fantasma{
-    background-color: var(--darker);
-    border-radius: 1rem;
-}
 
 .fantasma__pruebas{
     display: grid;
@@ -202,6 +254,26 @@ a {
     margin-bottom: -0.5rem;
 }
 
+.fantasmas-especiales-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 0 3rem;
+    gap: 1rem;
+}
+
+.caja-fantasma-especial {
+    background-color: var(--darker);
+    border-radius: 1rem;
+}
+
+.fantasma-descripcion{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0 2rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    color:gainsboro;
+}
+
 /* Version Movil */
     
 @media (max-width: 768px) {
@@ -225,6 +297,19 @@ a {
 
     .fantasma__habilidades:last-of-type {
         padding-bottom: 2rem;
+    }
+
+    .caja:hover{
+        border: 1px solid var(--blanco);
+        color: var(--blanco);
+    }
+
+    .fantasmas-especiales-grid{
+        display: block;
+    }
+
+    .caja-fantasma-especial{
+        margin: 2rem 0;
     }
 }
 
