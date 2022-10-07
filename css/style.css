@@ -151,7 +151,7 @@ span.caja__check {
   font-family: 'Special Elite', regular;
 }
 
-.reiniciar-caja:hover {
+.caja.reiniciar-caja:hover {
   color: white;
   background-color: var(--rojo);
   border: solid 1px var(--rojo);
@@ -348,7 +348,7 @@ span.caja__check {
 
   .caja:hover {
     border: 1px solid var(--blanco);
-    color: var(--blanco);
+    color: var(--darker);
   }
 
   .fantasmas-especiales-grid {
