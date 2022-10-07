@@ -12,7 +12,7 @@ const fantasmas = [
     Spirit: false,
     Huellas: true,
     fortaleza: ' Se fija en un jugador para atacar',
-    debilidad: ' A veces lo escuchas gritar desde el microfono parabolico',
+    debilidad: ' A veces lo escuchas gritar desde el micrófono parabólico',
     wiki: 'https://phasmophobia.fandom.com/wiki/Banshee',
   },
   {
@@ -37,7 +37,7 @@ const fantasmas = [
     Temperaturas: false,
     Spirit: true,
     Huellas: false,
-    fortaleza: ' Sabe siempre donde esta el jugador y se mueve rapido hacia su posicion',
+    fortaleza: ' Sabe siempre donde esta el jugador y se mueve rápido hacia su posición',
     debilidad: ' Se mueve mas lento una vez que ve al jugador',
     wiki: 'https://phasmophobia.fandom.com/wiki/Deogen',
   },
@@ -50,8 +50,8 @@ const fantasmas = [
     Temperaturas: false,
     Spirit: true,
     Huellas: true,
-    fortaleza: ' Mirarlo directamente descendera tu cordura rapidamente',
-    debilidad: ' Sacarle una foto hara que desaparezca',
+    fortaleza: ' Mirarlo directamente descenderá tu cordura rápidamente',
+    debilidad: ' Sacarle una foto hará que desaparezca',
     wiki: 'https://phasmophobia.fandom.com/wiki/Phantom',
   },
   {
@@ -64,11 +64,11 @@ const fantasmas = [
     Spirit: true,
     Huellas: false,
     fortaleza: ' No dejan pisadas luego de pisar la sal',
-    debilidad: ' Se volveran mas activos si pisan la sal',
+    debilidad: ' Se volverán mas activos si pisan la sal',
     wiki: 'https://phasmophobia.fandom.com/wiki/Wraith',
   },
   {
-    nombre: 'Espiritu',
+    nombre: 'Espíritu',
     DOTS: false,
     Escritura: true,
     EMF: true,
@@ -89,8 +89,8 @@ const fantasmas = [
     Temperaturas: true,
     Spirit: true,
     Huellas: false,
-    fortaleza: ' Cualquiera de los gemelos puede iniciar una caceria aunque no al mismo tiempo',
-    debilidad: ' Interactua con mas frecuencia en el ambiente',
+    fortaleza: ' Cualquiera de los gemelos puede iniciar una cacería aunque no al mismo tiempo',
+    debilidad: ' Interactúa con mas frecuencia en el ambiente',
     wiki: 'https://phasmophobia.fandom.com/wiki/The_Twins',
   },
   {
@@ -103,8 +103,8 @@ const fantasmas = [
     Spirit: false,
     Huellas: true,
     fortaleza:
-      ' Se va a mostrar solo cuando no hay nadie cerca y solo se lo puede ver en el dots con una camara de video',
-    debilidad: ' No se alejan mucho de su habitacion',
+      ' Se va a mostrar solo cuando no hay nadie cerca y solo se lo puede ver en el dots con una cámara de video',
+    debilidad: ' No se alejan mucho de su habitación',
     wiki: 'https://phasmophobia.fandom.com/wiki/Goryo',
   },
   {
@@ -116,8 +116,8 @@ const fantasmas = [
     Temperaturas: true,
     Spirit: false,
     Huellas: true,
-    fortaleza: ' Se mueve mas rapido en temperatura fria',
-    debilidad: ' Se mueve mas lento en temperatura calida',
+    fortaleza: ' Se mueve mas rápido en temperatura fría',
+    debilidad: ' Se mueve mas lento en temperatura cálida',
     wiki: 'https://phasmophobia.fandom.com/wiki/Hantu',
   },
   {
@@ -129,7 +129,7 @@ const fantasmas = [
     Temperaturas: true,
     Spirit: false,
     Huellas: true,
-    fortaleza: ' Se mueve mas rapido cuando el jugador esta lejos',
+    fortaleza: ' Se mueve mas rápido cuando el jugador esta lejos',
     debilidad: ' Apagar los fusibles evita que pueda usar sus habilidades',
     wiki: 'https://phasmophobia.fandom.com/wiki/Jinn',
   },
@@ -143,7 +143,7 @@ const fantasmas = [
     Spirit: true,
     Huellas: true,
     fortaleza: ' Pueden imitar las habilidades y rasgos de otros fantasmas ',
-    debilidad: ' Aparecen orbes en la habitacion del fantasma',
+    debilidad: ' Aparecen orbes en la habitación del fantasma',
     wiki: 'https://phasmophobia.fandom.com/wiki/Mimic',
   },
   {
@@ -154,9 +154,10 @@ const fantasmas = [
     Orbes: false,
     Temperaturas: true,
     Spirit: true,
-    huellas: false,
-    fortaleza: ' Se mueve mas rapido a poca cordura y hace que pierdan la cordura mas rapido mientras investigan',
-    debilidad: ' Los inciensos lo vuelven ciego en la cazeria por mas tiempo',
+    Huellas: false,
+    fortaleza:
+      ' Se mueve mas rápido a poca cordura y hace que pierdan la cordura mas rápido mientras investigan',
+    debilidad: ' Los inciensos lo vuelven ciego en la cacería por mas tiempo',
     wiki: 'https://phasmophobia.fandom.com/wiki/Moroi',
   },
   {
@@ -168,8 +169,8 @@ const fantasmas = [
     Temperaturas: false,
     Spirit: false,
     Huellas: true,
-    fortaleza: ' Cuando ataca es mas dificil oir los pasos',
-    debilidad: ' Hacen sonido paranormal mas frecuente en el microfono parabolico',
+    fortaleza: ' Cuando ataca es mas difícil oir los pasos',
+    debilidad: ' Hacen sonido paranormal mas frecuente en el micrófono parabólico',
     wiki: 'https://phasmophobia.fandom.com/wiki/Myling',
   },
   {
@@ -181,7 +182,7 @@ const fantasmas = [
     Temperaturas: false,
     Spirit: false,
     Huellas: true,
-    fortaleza: ' Deja huellas que desaparecen mas rapido',
+    fortaleza: ' Deja huellas que desaparecen mas rápido',
     debilidad: ' A veces cambia de forma / A veces deja 6 dedos en huella',
     wiki: 'https://phasmophobia.fandom.com/wiki/Obake',
   },
@@ -220,8 +221,8 @@ const fantasmas = [
     Temperaturas: false,
     Spirit: true,
     Huellas: false,
-    fortaleza: ' Atacan con mas frecuencia si las luces estan apagadas',
-    debilidad: ' Atacan con menos frecuencia si las luces estan encendidas',
+    fortaleza: ' Atacan con mas frecuencia si las luces están apagadas',
+    debilidad: ' Atacan con menos frecuencia si las luces están encendidas',
     wiki: 'https://phasmophobia.fandom.com/wiki/Mare',
   },
   {
@@ -234,7 +235,7 @@ const fantasmas = [
     Spirit: true,
     Huellas: true,
     fortaleza: ' Puede tirar varios objetos al mismo tiempo',
-    debilidad: ' Es inefectivo en habitaciones vacias',
+    debilidad: ' Es inefectivo en habitaciones vacías',
     wiki: 'https://phasmophobia.fandom.com/wiki/Poltergeist',
   },
   {
@@ -246,8 +247,8 @@ const fantasmas = [
     Temperaturas: false,
     Spirit: false,
     Huellas: false,
-    fortaleza: ' Se mueve mas rapido con dispostivos electricos',
-    debilidad: ' Interfiere con los aparatos electronicos a mayor distancia cuando ataca',
+    fortaleza: ' Se mueve mas rápido con dispositivos eléctricos',
+    debilidad: ' Interfiere con los aparatos electrónicos a mayor distancia cuando ataca',
     wiki: 'https://phasmophobia.fandom.com/wiki/Raiju',
   },
   {
@@ -259,7 +260,7 @@ const fantasmas = [
     Temperaturas: true,
     Spirit: false,
     Huellas: false,
-    fortaleza: ' Se mueve mas rapido si ve a un jugador en una caceria',
+    fortaleza: ' Se mueve mas rápido si ve a un jugador en una cacería',
     debilidad: ' Se mueve lento cuando no esta siguiendo a un jugador',
     wiki: 'https://phasmophobia.fandom.com/wiki/Revenant',
   },
@@ -272,7 +273,7 @@ const fantasmas = [
     Temperaturas: true,
     Spirit: false,
     Huellas: false,
-    fortaleza: ' Dificil de encontrar cuando hay dos o mas jugadores',
+    fortaleza: ' Difícil de encontrar cuando hay dos o mas jugadores',
     debilidad: ' No ataca si hay varias personas cerca',
     wiki: 'https://phasmophobia.fandom.com/wiki/Shade',
   },
@@ -285,7 +286,7 @@ const fantasmas = [
     Temperaturas: false,
     Spirit: false,
     Huellas: false,
-    fortaleza: ' Entrar en su habitacion lo hace mas activo, defensivo y agil',
+    fortaleza: ' Entrar en su habitación lo hace mas activo, defensivo y ágil',
     debilidad: ' Se vuelve mas lento y menos activo a medida que pasa el tiempo',
     wiki: 'https://phasmophobia.fandom.com/wiki/Thaye',
   },
@@ -298,7 +299,7 @@ const fantasmas = [
     Temperaturas: false,
     Spirit: true,
     Huellas: false,
-    fortaleza: ' Hablar cerca aumenta las probilidades de ataque',
+    fortaleza: ' Hablar cerca aumenta las probabilidades de ataque',
     debilidad: ' Cuando esta cazando solo puede oir voces',
     wiki: 'https://phasmophobia.fandom.com/wiki/Yokai',
   },
@@ -312,7 +313,7 @@ const fantasmas = [
     Spirit: false,
     Huellas: false,
     fortaleza: ' Tiene gran influencia en la cordura',
-    debilidad: ' Si se usa un incienso en su habitacion lo atrapa por 90 segundos',
+    debilidad: ' Si se usa un incienso en su habitación lo atrapa por 90 segundos',
     wiki: 'https://phasmophobia.fandom.com/wiki/Yurei',
   },
 ];
@@ -451,16 +452,19 @@ function encontrarPruebas(fantasma, primer_prueba, segunda_prueba, tercera_prueb
 }
 
 function aniadirFantasmasPosibles(listaPosibles) {
+  if (document.querySelectorAll('.caja__check').length <= 0) {
+    return;
+  }
+
   const lista = document.querySelector('.fantasmas__posibles');
   lista.classList.remove('ocultar');
 
   for (let i = 0; i < listaPosibles.length; i++) {
-    const warning = document.createElement('img');
-    warning.src =
-      'https://img.icons8.com/external-kmg-design-outline-color-kmg-design/16/000000/external-warning-maps-navigation-kmg-design-outline-color-kmg-design.png';
+    const strength = document.createElement('i');
+    strength.classList.add('fa-solid', 'fa-circle-exclamation');
 
-    const check = document.createElement('img');
-    check.src = 'https://img.icons8.com/color/16/000000/checked--v4.png';
+    const weakness = document.createElement('i');
+    weakness.classList.add('fa-solid', 'fa-circle-info');
 
     const fantasma = document.createElement('li');
 
@@ -480,7 +484,13 @@ function aniadirFantasmasPosibles(listaPosibles) {
       div_pruebas.classList.add('fantasma__pruebas--mimico');
       const cuarta_prueba = document.createElement('span');
       cuarta_prueba.classList.add('fantasma__prueba');
-      encontrarPruebas(listaPosibles[i], primer_prueba, segunda_prueba, tercera_prueba, cuarta_prueba);
+      encontrarPruebas(
+        listaPosibles[i],
+        primer_prueba,
+        segunda_prueba,
+        tercera_prueba,
+        cuarta_prueba
+      );
       div_pruebas.appendChild(cuarta_prueba);
     } else {
       encontrarPruebas(listaPosibles[i], primer_prueba, segunda_prueba, tercera_prueba);
@@ -510,14 +520,14 @@ function aniadirFantasmasPosibles(listaPosibles) {
     nombre.textContent = listaPosibles[i].nombre;
 
     const fortaleza = document.createElement('div');
-    fortaleza.appendChild(warning);
+    fortaleza.appendChild(strength);
     const fortaleza_span = document.createElement('span');
     fortaleza_span.textContent = 'Fortaleza:' + listaPosibles[i]['fortaleza'];
     fortaleza.appendChild(fortaleza_span);
     fortaleza.classList.add('fantasma__habilidades');
 
     const debilidad = document.createElement('div');
-    debilidad.appendChild(check);
+    debilidad.appendChild(weakness);
     const debilidad_span = document.createElement('span');
     debilidad_span.textContent = 'Debilidad:' + listaPosibles[i]['debilidad'];
     debilidad.appendChild(debilidad_span);
@@ -530,7 +540,7 @@ function aniadirFantasmasPosibles(listaPosibles) {
 
     fantasma.appendChild(div_propiedades);
 
-    fantasma.classList.add('caja-fantasma');
+    fantasma.classList.add('caja-fantasma', 'animate__animated', 'animate__zoomIn');
     lista.appendChild(fantasma);
 
     eliminar.addEventListener('click', (e) => e.path[3].remove());
