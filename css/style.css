@@ -11,9 +11,26 @@
   --icon-color-red: #d23030;
   --link-text-color: #008080;
   --border-color-red: #950006;
+  --scrollbar-hover-color: #b30007;
 }
 
 /* Globales */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--border-color-red);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-hover-color);
+}
 
 html {
   font-size: 62.5%;
