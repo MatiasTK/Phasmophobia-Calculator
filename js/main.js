@@ -17,15 +17,15 @@ const fantasmas = [
   },
   {
     nombre: 'Demonio',
-    DOTS: true,
+    DOTS: false,
     Escritura: true,
     EMF: false,
     Orbes: false,
     Temperaturas: true,
     Spirit: false,
-    Huellas: false,
+    Huellas: true,
     fortaleza: ' Ataca con mas frecuencia',
-    debilidad: ' Menos agresivo cerca de un crucifijo',
+    debilidad: ' Efectividad con crucifijos aumentada a 5 metros',
     wiki: 'https://phasmophobia.fandom.com/wiki/Demon',
   },
   {
@@ -38,7 +38,7 @@ const fantasmas = [
     Spirit: true,
     Huellas: false,
     fortaleza: ' Sabe siempre donde esta el jugador y se mueve rápido hacia su posición',
-    debilidad: ' Se mueve mas lento una vez que ve al jugador',
+    debilidad: ' Se mueve mas lento cerca del jugador',
     wiki: 'https://phasmophobia.fandom.com/wiki/Deogen',
   },
   {
@@ -63,8 +63,8 @@ const fantasmas = [
     Temperaturas: false,
     Spirit: true,
     Huellas: false,
-    fortaleza: ' No dejan pisadas luego de pisar la sal',
-    debilidad: ' Se volverán mas activos si pisan la sal',
+    fortaleza: ' No dejan huellas',
+    debilidad: ' Tienen miedo de la sal y van a intentar esquivarla',
     wiki: 'https://phasmophobia.fandom.com/wiki/Wraith',
   },
   {
@@ -76,7 +76,7 @@ const fantasmas = [
     Temperaturas: false,
     Spirit: true,
     Huellas: false,
-    fortaleza: ' No tiene lol',
+    fortaleza: ' No tiene',
     debilidad: ' Utilizar un incienso cerca de ellos evitara que ataque por un largo periodo',
     wiki: 'https://phasmophobia.fandom.com/wiki/Spirit',
   },
@@ -90,7 +90,7 @@ const fantasmas = [
     Spirit: true,
     Huellas: false,
     fortaleza: ' Cualquiera de los gemelos puede iniciar una cacería aunque no al mismo tiempo',
-    debilidad: ' Interactúa con mas frecuencia en el ambiente',
+    debilidad: ' Interactúan con mas frecuencia en el ambiente al mismo tiempo',
     wiki: 'https://phasmophobia.fandom.com/wiki/The_Twins',
   },
   {
@@ -102,9 +102,8 @@ const fantasmas = [
     Temperaturas: false,
     Spirit: false,
     Huellas: true,
-    fortaleza:
-      ' Se va a mostrar solo cuando no hay nadie cerca y solo se lo puede ver en el dots con una cámara de video',
-    debilidad: ' No se alejan mucho de su habitación',
+    fortaleza: ' Solo se lo puede ver por el DOTS por cámara cuando no hay nadie cerca de él',
+    debilidad: ' No se alejan de su habitación o cambian sus habitaciones.',
     wiki: 'https://phasmophobia.fandom.com/wiki/Goryo',
   },
   {
@@ -183,7 +182,8 @@ const fantasmas = [
     Spirit: false,
     Huellas: true,
     fortaleza: ' Deja huellas que desaparecen mas rápido',
-    debilidad: ' A veces cambia de forma / A veces deja 6 dedos en huella',
+    debilidad:
+      ' Leve chance de dejar huella con 6 dedos. Puede cambiar de forma durante una cacería',
     wiki: 'https://phasmophobia.fandom.com/wiki/Obake',
   },
   {
@@ -195,8 +195,8 @@ const fantasmas = [
     Temperaturas: true,
     Spirit: false,
     Huellas: false,
-    fortaleza: ' Tiene mayor actividad y eventos fantasma',
-    debilidad: ' Son muy activos con las interacciones',
+    fortaleza: ' Son mas activos con gente cerca y consumen mas la cordura cuando se muestran',
+    debilidad: ' En las cacerías va estar casi siempre visible',
     wiki: 'https://phasmophobia.fandom.com/wiki/Oni',
   },
   {
@@ -235,7 +235,7 @@ const fantasmas = [
     Spirit: true,
     Huellas: true,
     fortaleza: ' Puede tirar varios objetos al mismo tiempo',
-    debilidad: ' Es inefectivo en habitaciones vacías',
+    debilidad: ' Es inefectivo si no hay nada que tirar',
     wiki: 'https://phasmophobia.fandom.com/wiki/Poltergeist',
   },
   {
@@ -334,6 +334,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ocultarPosibles();
   cambiarColor();
   reiniciarCaja();
+  addSnow();
 });
 
 function ocultarPosibles() {
@@ -567,4 +568,69 @@ function reiniciarCaja() {
     seccionFantasmas.classList.add('ocultar');
     ocultarPosibles();
   };
+}
+
+function addSnow() {
+  var script = document.createElement('script');
+  script.src = 'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js';
+  script.onload = function () {
+    particlesJS('snow', {
+      particles: {
+        number: {
+          value: 50,
+          density: {
+            enable: true,
+            value_area: 800,
+          },
+        },
+        color: {
+          value: '#ffffff',
+        },
+        opacity: {
+          value: 0.7,
+          random: false,
+          anim: {
+            enable: false,
+          },
+        },
+        size: {
+          value: 5,
+          random: true,
+          anim: {
+            enable: false,
+          },
+        },
+        line_linked: {
+          enable: false,
+        },
+        move: {
+          enable: true,
+          speed: 2.5,
+          direction: 'bottom',
+          random: true,
+          straight: false,
+          out_mode: 'out',
+          bounce: false,
+          attract: {
+            enable: true,
+            rotateX: 300,
+            rotateY: 1200,
+          },
+        },
+      },
+      interactivity: {
+        events: {
+          onhover: {
+            enable: false,
+          },
+          onclick: {
+            enable: false,
+          },
+          resize: false,
+        },
+      },
+      retina_detect: true,
+    });
+  };
+  document.head.append(script);
 }
